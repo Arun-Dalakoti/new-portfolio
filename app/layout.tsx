@@ -15,6 +15,10 @@ export const metadata: Metadata = {
     "Software Engineer",
   ],
   authors: [{ name: "Arun Dalakoti" }],
+  icons: {
+    icon: "/icon",
+    apple: "/apple-icon",
+  },
   openGraph: {
     title: "Arun Dalakoti | Senior Front-End Developer",
     description: "Building scalable, high-performance web applications",
