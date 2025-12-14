@@ -31,13 +31,13 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up" style={{animationDelay: "0.8s", animationFillMode: "both"}}>
             <a
               href="#contact"
-              className="px-8 py-4 rounded-full gradient-bg text-white font-semibold text-lg hover:opacity-90 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="px-8 py-4 rounded-full gradient-bg text-white font-semibold text-lg hover:opacity-90 transition-all shadow-lg hover:shadow-xl"
             >
               Get in Touch
             </a>
             <a
               href="#projects"
-              className="px-8 py-4 rounded-full border-2 border-[var(--primary)] text-[var(--primary)] font-semibold text-lg hover:bg-[var(--primary)] hover:text-white transition-all transform hover:scale-105"
+              className="px-8 py-4 rounded-full border-2 border-[var(--primary)] text-[var(--primary)] font-semibold text-lg hover:bg-[var(--primary)] hover:text-white transition-all"
             >
               View Projects
             </a>
