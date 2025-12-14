@@ -359,6 +359,7 @@ export default function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 onBlur={handleBlur}
+                autoComplete="name"
                 className={`w-full px-4 py-3 rounded-lg border ${
                   touched.name && errors.name
                     ? "border-red-500 focus:ring-red-500"
@@ -367,7 +368,11 @@ export default function Contact() {
                 placeholder="Your name"
               />
               {touched.name && errors.name && (
-                <p className="mt-2 text-sm text-red-500 flex items-center gap-1">
+                <p
+                  className="mt-2 text-sm text-red-500 flex items-center gap-1"
+                  role="alert"
+                  aria-live="polite"
+                >
                   <svg
                     className="w-4 h-4"
                     fill="currentColor"
@@ -398,6 +403,7 @@ export default function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 onBlur={handleBlur}
+                autoComplete="email"
                 className={`w-full px-4 py-3 rounded-lg border ${
                   touched.email && errors.email
                     ? "border-red-500 focus:ring-red-500"
@@ -406,7 +412,11 @@ export default function Contact() {
                 placeholder="your.email@example.com"
               />
               {touched.email && errors.email && (
-                <p className="mt-2 text-sm text-red-500 flex items-center gap-1">
+                <p
+                  className="mt-2 text-sm text-red-500 flex items-center gap-1"
+                  role="alert"
+                  aria-live="polite"
+                >
                   <svg
                     className="w-4 h-4"
                     fill="currentColor"
@@ -448,7 +458,11 @@ export default function Contact() {
                 placeholder="Your message..."
               />
               {touched.message && errors.message && (
-                <p className="mt-2 text-sm text-red-500 flex items-center gap-1">
+                <p
+                  className="mt-2 text-sm text-red-500 flex items-center gap-1"
+                  role="alert"
+                  aria-live="polite"
+                >
                   <svg
                     className="w-4 h-4"
                     fill="currentColor"

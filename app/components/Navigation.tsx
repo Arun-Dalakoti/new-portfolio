@@ -33,6 +33,8 @@ export default function Navigation() {
             ? "bg-background/95 backdrop-blur-md shadow-lg border-b border-[var(--border)]"
             : "bg-background/50 backdrop-blur-sm"
         }`}
+        role="navigation"
+        aria-label="Main navigation"
       >
         <div className="container-custom section-padding !py-4 md:!py-6">
           <div className="flex justify-between items-center">
@@ -65,7 +67,8 @@ export default function Navigation() {
             <button
               className="md:hidden text-2xl relative p-2 hover:text-[var(--primary)] transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMobileMenuOpen}
             >
               {isMobileMenuOpen ? "✕" : "☰"}
             </button>
@@ -83,7 +86,12 @@ export default function Navigation() {
           />
 
           {/* Mobile Menu */}
-          <div className="fixed top-0 right-0 bottom-0 w-4/5 max-w-sm bg-[var(--background)] z-[70] md:hidden shadow-2xl animate-slide-in-right">
+          <div
+            className="fixed top-0 right-0 bottom-0 w-4/5 max-w-sm bg-[var(--background)] z-[70] md:hidden shadow-2xl animate-slide-in-right"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Mobile navigation menu"
+          >
             <div className="flex flex-col h-full pt-24 pb-8 px-8">
               <div className="flex flex-col gap-6">
                 {navLinks.map((link, index) => (
